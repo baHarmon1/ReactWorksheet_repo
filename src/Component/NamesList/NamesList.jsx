@@ -1,16 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-const NamesList = (props) => {
-    let renderedNames = props.names.map(name => {
-        return <p>{name}</p>
-    })
-    return ( 
-        <div className='namesList'>
-            <ul>
-                {renderedNames}
-            </ul>
-        </div>
-     );
-}
- 
+const NamesList = ({ names }) => {
+  return (
+    <div className="namesList">
+      <ul>
+        {names.map((name) => <li>{name}</li>)}
+      </ul>
+    </div>
+  );
+};
+
 export default NamesList;
